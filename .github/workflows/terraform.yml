@@ -3,7 +3,7 @@ on:
   push:
     branches:
       - main
-      - stage
+      - stagging
     paths:  
       - terraform/**
   pull_request:
@@ -18,8 +18,8 @@ env:
  AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
  # S3 bucket for the Terraform state
  BUCKET_TF_STATE: ${{ secrets.BUCKET_TF_STATE}}
- AWS_REGION: us-east-2
- EKS_CLUSTER: vprofile-eks
+ AWS_REGION: us-east-1
+ EKS_CLUSTER: vprofile-ekslab
 
 jobs:
    terraform:
